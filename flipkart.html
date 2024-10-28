@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .container {
+            min-height: 100vh; /* Ensure full height */
+            width: 100vw;
+            background-color: lightgray;
+            position: relative;
+        }
+        
+        header{
+                
+                background-color: white;
+                display: flex;
+                height: 10vh;
+                width: 100%;
+                padding: 10px 20px;
+                align-items: center;
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                z-index: 1000;
+                
+
+            }
+           
+            .logo img{
+                height: 90px;
+                width: 250px;
+                object-fit: contain;
+                
+
+            }
+            .spacer{
+                width: 500px;
+                height: auto;
+            }
+            nav{
+                
+                display: flex;
+                align-items: center;
+            }
+           
+           
+            nav a{
+                margin-left: 30px;
+                color: black;
+                cursor: pointer ;
+                text-decoration: none;
+                font-size: 20px;
+                justify-content: ;
+
+            }
+            .item_container{
+                margin: 10px;
+                display: flex;
+                background-color: white;
+                padding: 20px;
+                padding-top: 100px;
+                justify-content: space-around;
+                
+            }
+            .item{
+                text-align: center;
+                text-decoration: none;
+                color: black;
+                width: 150px;
+
+            }
+            .item img{
+                width: 80px;
+                height: auto;
+                object-fit: contain;
+            }
+            .item p{
+                margin-top: 10px;
+                font-size: 18px;
+                font-weight: bold;
+                color: black;
+            }
+            .banner{
+                margin: 10px;
+                height: 300px;
+                background-color: white;
+                overflow: hidden; 
+    
+    
+            }
+
+
+            .banner img {
+                height: auto;
+                width: 100%; 
+                max-height: 100%;
+                object-fit: fill; 
+            }
+        .premium-products {
+            margin: 10px;
+            padding: 20px;
+            background-color: white; /* Keep this white */
+        }
+        .premium-products h2{
+        text-align: left;
+        margin-bottom: 20px;
+        font-weight: bold;
+    }
+    .product-list{
+        
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        
+        padding: 20px;
+        
+
+    }
+    .product{
+    
+        text-align: center;
+        width: 150px;
+        height: 200px;
+        text-decoration: none;
+
+    }
+    .product img{
+        width: 100% ;
+        height: 150px;
+        object-fit: contain;
+        
+    }
+     .product p{
+        margin-top: 10px;
+        font-size: 16px;
+        color: black;
+        text-align: center;
+    }
+    .product h4{
+        font-weight: bolder;
+        margin: 0;
+
+    }
+    .box-container
+    {
+        margin: 10px;
+        padding: 20px;
+        display: flex;
+        
+        
+        justify-content: space-between;
+        padding: 20px 0;
+    }
+    .box-list{
+        
+        width:48vw;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        height: 90vh;
+        background-color:white ;
+        
+       
+        
+    }
+    .grid-heading
+    {
+        grid-column: span 2;
+        text-align: left;
+        font-size: 24px;
+       
+
+    }
+    
+    .box-product{
+    
+        text-align: center;
+        width: 200px;
+        height: 250px;
+        text-decoration: none;
+        margin: 10px;
+        margin-top: 20px;
+
+    }
+    .box-product img{
+        width: 100% ;
+        height: 150px;
+        object-fit: contain;
+    
+    }   
+    .box-product  a,p{
+        margin-top: 10px;
+        font-size: 16px;
+        color: black;
+        text-align: center;
+        text-decoration: none;
+    }
+    .box-product h4{
+        font-weight: bolder;
+        margin: 0;
+        text-decoration: none;
+
+    }
+    .footer{
+        height: 70vh;
+        width: 100%;
+        background-color: black;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .footer-item{
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+
+    }
+    .footer-item h5{
+        color: lightblue;
+        text-align: center;
+        font-weight: bold;
+    }
+    .footer-item a,p{
+        text-decoration: none;
+        color: white;
+        text-align: center;
+        margin: 0;
+    }
+    .footer-divider{
+        width: 5px;
+        border-left: 1px solid lightblue;
+        height: 250px;
+        
+        margin: 0 10px;
+        opacity: 0.5;
+    }
+    .footer-bottom{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 100%;
+
+    }
+    .footer-bottom a,p{
+        text-decoration: none;
+        color: white;
+        text-align: center;
+        margin: 0;
+    }
+    
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <a href="flipkart_home.html" target="_self"><img src="image/1000_F_298186090_Rimyxol4jsYvYbQg1i6sttQ5N3oebXgt.jpg"</a>
+            
+            </div>
+            <div class="spacer"></div>
+            <nav>
+                <a href="login.html" target="_blank">Login</a>
+                <a href="cart.html" target="_blank">Cart</a>
+                <a href="login.html" target="_blank">Become a Seller</a>
+
+            <nav>
+
+            </nav>
+        </header>
+        <div class="item_container">
+            <a href="offers.html" target="_blank" class="item">
+                <img src="image/6a99be02898b225d.webp">
+                <p>Top Offers</p>
+            </a>
+            <a href="mobiles.html" target="_blank" class="item">
+                <img src="image/1400d6186b839cde.webp">
+                <p>Grocery</p>
+            </a>
+            <a href="offers.html" target="_blank" class="item">
+                <img src="image/2e30d5fac47eff64.webp">
+                <p>TV & Electronics</p>
+            </a>
+            <a href="offers.html" target="_blank" class="item">
+                <img src="image/e7947cc0cc4a6b7c.webp">
+                <p>Furniture</p>
+            </a>
+            <a href="offers.html" target="_blank" class="item">
+                <img src="image/46de73feaefc28cd.webp">
+                <p>Fashion</p>
+            </a>
+            <a href="offers.html" target="_blank" class="item">
+                <img src="image/49f31863cc17d101.webp">
+                <p>Travel</p>
+            </a>
+            <a href="offers.html" target="_blank" class="item">
+                <img src="image/8538d487cd2bc8b7 (1).webp">
+                <p>Home & Kitchen</p>
+            </a>
+            <a href="offers.html" target="_blank" class="item">
+                <img src="image/4a5fb0c8e0461335.webp">
+                <p>Electronic Appliances</p>
+            </a>
+            <a href="offers.html" target="_blank" class="item">
+                <img src="image/6c22d4999cdb4144.webp">
+                <p>Mobiles & Tablet</p>
+            </a>
+            <a href="offers.html" target="_blank" class="item">
+                <img src="image/84bf20569b1ebc3a.webp">
+                <p>Beauty</p>
+            </a>
+        </div>
+        <div class="banner">
+            <img src="image/time-prepare-holidays-cheeky-gorgeous-smiling-girl-with-red-curly-hair-pointing-right-advice.jpg">
+
+        </div>
+        <div class="premium-products">
+            <a style="text-decoration: none;" href="premium_products.html" target="_blank">
+                <h2>Premium Products</h2>
+            </a>
+            <div class="product-list">
+                <a style="text-decoration: none;" href="products.html" target="_blank" class="product">
+                    <img src="image/product_image/-original-imah54henxrxcdhx.webp">
+                    <p>Best of QLED TVs</p>
+                    <h4>From Rs 7,000</h4>
+                </a>
+            
+                <a style="text-decoration: none;" href="products.html" target="_blank" class="product">
+                    <img src="image/product_image/nb140-ranger-50-hours-playtime-perfect-for-music-dual-pairing-original-imah3syepnp2rtvv.webp">
+                 <p>Bestselling Earpods</p>
+                 <h4>From Rs 699</h4>
+
+                </a>
+                <a style="text-decoration: none;" href="products.html" target="_blank" class="product">
+                    <img src="image/product_image/480-6000-5-professional-19-inch-rgb-ring-light-for-youtube-photo-original-imag9a8cytgcshf9.webp">
+                 <p>Flah Ring Lights</p>
+                 <h4>From Rs 799</h4>
+
+                </a>
+                <a style="text-decoration: none;" href="products.html" target="_blank" class="product">
+                    <img src="image/product_image/-original-imahfa7xekwfg7cc.webp">
+                 <p>Samsung WAtch</p>
+                 <h4>From Rs 17,000</h4>
+
+                </a>
+                <a style="text-decoration: none;" href="products.html" target="_blank" class="product">
+                    <img src="image/product_image/elite-x-rgb-wired-evofox-original-imah5heajq8hrqbm.webp">
+                 <p>Gamepads</p>
+                 <h4>From Rs 699</h4>
+
+                </a>
+            </div>
+        </div>
+        <div class="premium-products">
+            <a style="text-decoration: none;" href="premium_products.html" target="_blank">
+                <h2>Best Deals on Electronics</h2>
+            </a>
+            <div class="product-list">
+                <a style="text-decoration: none;" href="products.html" target="_blank" class="product">
+                    <img src="image/product_image/elec/-original-imagpu2t9erq3eyt.webp">
+                    <p>Best Deals on Monitors</p>
+                    <h4>From Rs 5,599</h4>
+                </a>
+            
+                <a style="text-decoration: none;" href="products.html" target="_blank" class="product">
+                    <img src="image/product_image/elec/-original-imagu5gb2gzvduvz.webp">
+                 <p>Bestselling Tablets</p>
+                 <h4>From Rs 8,999</h4>
+
+                </a>
+                <a style="text-decoration: none;" href="products.html" target="_blank" class="product">
+                    <img src="image/product_image/elec/-original-imagyahhmczxzhqw.webp">
+                 <p>Premium Monitors</p>
+                 <h4>From Rs 15,699</h4>
+
+                </a>
+                <a style="text-decoration: none;" href="products.html" target="_blank" class="product">
+                    <img src="image/product_image/elec/dcp-l2520d-ind-brother-original-imah3fzquk9xegpr.webp">
+                 <p>Laser printers</p>
+                 <h4 >From Rs 9,099</h4>
+
+                </a>
+                <a style="text-decoration: none;" href="products.html" target="_blank" class="product">
+                    <img src="image/product_image/elec/key2-combo-wireless-mouse-multimedia-portronics-original-imaggz7k7ujcdy3g.webp">
+                 <p>Computer Accessories</p>
+                 <h4>From Rs 80</h4>
+
+                </a>
+            </div>
+        </div>
+        <div class="box-container">
+            <div class="box-list">
+                <div class="grid-heading">Fashion</div>
+                <div class="box-product">
+                    <a href="fashion.html" target="_blank">
+                    <img src="image/product_image/fashion/na-l-3-4-sleeve-stitched-mkafr-1090-black-red-rayon-murli-kurti-original-imah4t22jpmeud7y.webp">
+                    <p>Kurtis</p>
+                    <h4>Min 50% Off</h4>
+                    </a>
+                </div>
+                <div class="box-product">
+                    <a href="fashion.html" target="_blank">
+                    <img src="image/product_image/fashion/na-xxl-short-sleeve-stitched-gown-femvy-na-original-imagcdkfafuzakst.webp">
+                    <p>Gown</p>
+                    <h4>Min 50% Off</h4>
+                    </a>
+                </div>
+            
+                <div class="box-product">
+                    <a href="fashion.html" target="_blank">
+                    <img src="image/product_image/fashion/s-yes-mbb01-yoonikk-original-imah5p8cgyqmhdbs.webp">
+                    <p>Men's Kurta</p>
+                    <h4>Min 50% Off</h4>
+                    </a>
+                </div>
+                <div class="box-product">                        
+                
+                    <a href="fashion.html" target="_blank">
+                    <img src="image/product_image/fashion/xl-no-phjk000004-highlander-original-imagtmrkntvhfnga.webp">
+                    <p>Men's Jacket</p>
+                    <h4>Min 50% Off</h4>
+                    </a>
+        
+        
+                </div>
+            </div>
+            <div class="box-list">
+                <div class="grid-heading">Best Gadgets and Appliances</div>
+                <div class="box-product">
+                    <a href="fashion.html" target="_blank">
+                    <img src="image/product_image/gadgets/-original-imah26hzy2dzhqag.webp">
+                    <p>Washing Machines</p>
+                    <h4>Min 50% Off</h4>
+                    </a>
+                </div>
+                <div class="box-product">
+                    <a href="fashion.html" target="_blank">
+                    <img src="image/product_image/gadgets/-original-imah5ywfebrs9bfg.webp">
+                    <p>Mobiles</p>
+                    <h4>Min 50% Off</h4>
+                    </a>
+                </div>
+            
+                <div class="box-product">
+                    <a href="fashion.html" target="_blank">
+                    <img src="image/product_image/gadgets/eos-r100-24-1-eos-r100-kit-canon-original-imagqeydhsxgacxp.webp">
+                    <p>Camera</p>
+                    <h4>Min 50% Off</h4>
+                    </a>
+                </div>
+                <div class="box-product">                        
+                
+                    <a class="product" href="fashion.html" target="_blank">
+                    <img src="image/product_image/gadgets/silky-shine-1400-w-hot-and-cold-foldable-nhp-8104-nova-original-imah45ecxc8fnd5p.webp">
+                    <p>Hair dryer</p>
+                    <h4>Min 50% Off</h4>
+                    </a>
+        
+        
+                </div>
+            </div>
+        </div>
+            <div class="premium-products">
+                <a style="text-decoration: none;" href="premium_products.html" target="_blank">
+                    <h2>Lowest Price</h2>
+                </a>
+                <div class="product-list">
+                    <a style="text-decoration: none;" href="products.html" target="_blank" class="product">
+                        <img src="image/product_image/New folder]]/+.webp">
+                        <p>Puma</p>
+                        <h4>Min 50% Off</h4>
+                    </a>
+                
+                    <a style="text-decoration: none;" href="products.html" target="_blank" class="product">
+                        <img src="image/product_image/New folder]]/500-mixed-dry-fruits-1-plastic-bottle-dailyherbs-original-imahf3nh7z2can2a.webp">
+                     <p>Food Products</p>
+                     <h4>Min 35% Off</h4>
+    
+                    </a>
+                    <a style="text-decoration: none;" href="products.html" target="_blank" class="product">
+                        <img src="image/product_image/New folder]]/7-key-holder-mahicrafts-original-imahydqyrsgycfgw.webp">
+                     <p>Key Holders</p>
+                     <h4>Under Rs 299</h4>
+    
+                    </a>
+                    <a style="text-decoration: none;" href="products.html" target="_blank" class="product">
+                        <img src="image/product_image/New folder]]/700-gym-shaker-with-cyclone-blender-100-leakproof-bpa-free-original-imah4j2cpu9gtfgw.webp">
+                     <p>Yoga and Fitness</p>
+                     <h4 >From Rs 99</h4>
+    
+                    </a>
+                    <a style="text-decoration: none;" href="products.html" target="_blank" class="product">
+                        <img src="image/product_image/New folder]]/rich-dad-poor-dad-20th-anniversary-edition-original-imah5kne5wxzz8ps.webp">
+                     <p>Self Help Books</p>
+                     <h4>From Rs 45</h4>
+    
+                    </a>
+                </div>
+            </div>
+            <footer class="footer">
+                <div class="footer-item">
+                    <h5>ABOUT</h5>
+                    <a href="" target="_blank">Contact Us</a>
+                    <a href="" target="_blank">About Us</a>
+                    <a href="" target="_blank">Flipkart Stories</a>
+                    <a href="" target="_blank">Press</a>
+                    <a href="" target="_blank">Careera</a>
+                    <a href="" target="_blank">Corporate Information</a>
+
+                    
+                </div>
+                <div class="footer-item">
+                    <h5>GROUP COMPANIES</h5>
+                    <a> href="" target="_blank"Myntra</a>
+                    <a href="" target="_blank">Cleartrip</a>
+                    <a href="" target="_blank">Shopsy</a>
+                   
+                </div>
+                <div class="footer-item">
+                    <h5>HELP</h5>
+                    <a href="" target="_blank">Payment</a>
+                    <a href="" target="_blank">Shipping</a>
+                    <a href="" target="_blank">Cancellation & Returns</a>
+                    <a href="" target="_blank">FAQ</a>
+                    <a href="" target="_blank">Report Infringement</a>
+                   
+                </div>
+                <div class="footer-item">
+                    <h5>CONSUMER POLICY</h5>
+                    <a href="" target="_blank">Cancellation & Returns</a>
+                    <a href="" target="_blank">Security</a>
+                    <a href="" target="_blank">Privacy</a>
+                    <a href="" target="_blank">Sitemap</a>
+                    <a href="" target="_blank">Terms of Use</a>
+                    <a href="" target="_blank">EPR Compliance</a>
+                    <a href="" target="_blank">Grievance Redressal</a>
+                   
+                </div>
+                <div class="footer-divider">
+
+                </div>
+                <div class="footer-item">
+                    <h5>Mail Us</h5>
+                    <p>Flipkart Internet Private Limited,</p>
+                    <p>Building Alyssa,Begonia &</p>
+                    <p>Clove Embassy Tech Village,</p>
+                    <p>Outer Ring Road,</p>
+                    <p>Bengaluru,5601013</p>
+                    <p>Karnataka,India</p>                    
+                   
+                </div>
+                <div class="footer-item">
+                    <h5>Registered Office Address</h5>
+                    <p>Flipkart Internet Private Limited,</p>
+                    <p>Building Alyssa,Begonia &</p>
+                    <p>Clove Embassy Tech Village,</p>
+                    <p>Outer Ring Road,</p>
+                    <p>Bengaluru,5601013</p>
+                    <p>Karnataka,India</p>      
+                    <p>Telephone : 044-456167003</p>      
+
+                   
+                </div>
+                <div class="footer-bottom">
+                    <a href="" target="_blank">Become a Seller</a>
+                    <a href="" target="_blank">Advertise</a>
+                    <a href="" target="_blank">Gift Card</a>
+                    <a href="" target="_blank">Help Center</a>
+                    <p>©2007-2024 flipcart.com</p>
+
+
+                    
+
+
+                </div>
+            </footer>
+            
+      
+
+       
+
+    </div>
+    
+</body>
+</html>
